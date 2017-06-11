@@ -11,11 +11,11 @@ In this step we will create the basic folders and files for our application. We 
 
 ## 2. Display TV Shows
 
-We will display a list with the most popular TV Shows. Using [themoviedb.org](http://themoviedb.org) database.
+We will display a list with the most popular TV Shows. The data will load from `tvshows.json`.
 
-## 3. Implement search TV Show functionality
+## 3. Connect with Implement search TV Show functionality
 
-We will add a search field at the top of the page that will search the database by show title.
+We will fetch data from [themoviedb.org](http://themoviedb.org) database and implement a search by show title.
 
 ## 4. Use Redux to manage state
 
