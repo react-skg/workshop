@@ -7,7 +7,7 @@ We are going to use `create-react-app` to start a new React project. The package
 
 ## 1. Basic App Structure
 
-In this step we will create the basic folders and files for our application.
+In this step we will create the basic folders and files for our application. We will also create our first snapshot using Jest.
 
 ## 2. Display TV Shows
 
