@@ -1,0 +1,170 @@
+{
+  "backdrop_path": "/tQkigP2fItdzJWvtIhBvHxgs5yE.jpg",
+  "created_by": [
+    {
+      "id": 57293,
+      "name": "Sydney Newman",
+      "gender": 2,
+      "profile_path": "/1YfvkmiBjWPI67GsfoMd1NoPews.jpg"
+    },
+    {
+      "id": 1213434,
+      "name": "C. E. Webber",
+      "gender": 0,
+      "profile_path": null
+    },
+    {
+      "id": 1213433,
+      "name": "Donald Wilson",
+      "gender": 0,
+      "profile_path": "/1DeMkL3rF12uHMeMUlHXAoMUvDC.jpg"
+    }
+  ],
+  "episode_run_time": [
+    80,
+    70,
+    50,
+    60,
+    45
+  ],
+  "first_air_date": "2005-03-26",
+  "genres": [
+    {
+      "id": 10759,
+      "name": "Action & Adventure"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 10765,
+      "name": "Sci-Fi & Fantasy"
+    }
+  ],
+  "homepage": "http://www.bbc.co.uk/programmes/b006q2x0",
+  "id": 57243,
+  "in_production": true,
+  "languages": [
+    "en"
+  ],
+  "last_air_date": "2017-07-01",
+  "name": "Doctor Who",
+  "networks": [
+    {
+      "id": 4,
+      "name": "BBC One"
+    },
+    {
+      "id": 493,
+      "name": "BBC America"
+    },
+    {
+      "id": 511,
+      "name": "France 4"
+    }
+  ],
+  "number_of_episodes": 127,
+  "number_of_seasons": 10,
+  "origin_country": [
+    "GB"
+  ],
+  "original_language": "en",
+  "original_name": "Doctor Who",
+  "overview": "The Doctor looks and seems human. He's handsome, witty, and could be mistaken for just another man in the street. But he is a Time Lord: a 900 year old alien with 2 hearts, part of a gifted civilization who mastered time travel. The Doctor saves planets for a living – more of a hobby actually, and he's very, very good at it. He's saved us from alien menaces and evil from before time began – but just who is he?",
+  "popularity": 57.977748,
+  "poster_path": "/cFcZYgPRFZdBkA7EsxHz5Cb8x5.jpg",
+  "production_companies": [
+    {
+      "name": "BBC Wales",
+      "id": 4762
+    },
+    {
+      "name": "Canadian Broadcasting Corporation",
+      "id": 71708
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2005-11-18",
+      "episode_count": 146,
+      "id": 58476,
+      "poster_path": "/Shm5ZavLApx6HMFWviKP5Sx1J8.jpg",
+      "season_number": 0
+    },
+    {
+      "air_date": "2005-03-26",
+      "episode_count": 13,
+      "id": 58468,
+      "poster_path": "/9Jt2FFCAME7eHDC28r4qCHErhhF.jpg",
+      "season_number": 1
+    },
+    {
+      "air_date": "2006-04-15",
+      "episode_count": 13,
+      "id": 58469,
+      "poster_path": "/oXVmsIkZCgJDNcZJJxzvV7zwyb1.jpg",
+      "season_number": 2
+    },
+    {
+      "air_date": "2007-04-01",
+      "episode_count": 13,
+      "id": 58470,
+      "poster_path": "/67xbjSv353G2rqQIs6dnDKc6P11.jpg",
+      "season_number": 3
+    },
+    {
+      "air_date": "2008-04-05",
+      "episode_count": 13,
+      "id": 58471,
+      "poster_path": "/h6hogh9U371q87XLhvrJbczg8lm.jpg",
+      "season_number": 4
+    },
+    {
+      "air_date": "2010-04-03",
+      "episode_count": 13,
+      "id": 58472,
+      "poster_path": "/hUsQerEeMqsu9cVYzMEB2OGJjrw.jpg",
+      "season_number": 5
+    },
+    {
+      "air_date": "2011-04-23",
+      "episode_count": 13,
+      "id": 58473,
+      "poster_path": "/xmfMcVkVer5r33QhA4e2DpIR78B.jpg",
+      "season_number": 6
+    },
+    {
+      "air_date": "2012-09-01",
+      "episode_count": 13,
+      "id": 58474,
+      "poster_path": "/6biGcR0OyFnKRxxUW7bGtK49wTd.jpg",
+      "season_number": 7
+    },
+    {
+      "air_date": "2014-08-23",
+      "episode_count": 12,
+      "id": 58475,
+      "poster_path": "/nMxeLkOF9DzbqJdSx7gzmbFvPGK.jpg",
+      "season_number": 8
+    },
+    {
+      "air_date": "2015-09-19",
+      "episode_count": 12,
+      "id": 64188,
+      "poster_path": "/uidaCdI0hKiZGfMzWHNMYeNZyV7.jpg",
+      "season_number": 9
+    },
+    {
+      "air_date": "2017-04-15",
+      "episode_count": 12,
+      "id": 76615,
+      "poster_path": "/8HPLQQqTPfy7Oiligw9FXcfig9w.jpg",
+      "season_number": 10
+    }
+  ],
+  "status": "Returning Series",
+  "type": "Scripted",
+  "vote_average": 7,
+  "vote_count": 733
+}
