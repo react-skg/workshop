@@ -13,7 +13,7 @@ We will build a small ReactJS application which you will be able to complete ste
 ## Who Is this Workshop For? 
 We tried to make this workshop useful for many categories of developers. 
 
-In order to fully understand the key concepts behind this tutorial you should be familiar with Javascript, HTML and CSS. In our examples we will use the ES6 syntax, such us modules and fat arrow functions. We will also use a variety of `npm` packages.
+In order to fully understand the key concepts behind this tutorial you should be familiar with Javascript, HTML and CSS. In our examples we will use the ES6 syntax, such as modules and fat arrow functions. We will also use a variety of `npm` packages.
 
 If you don't have any previous experience with the ReactJS ecosystem or if you are working with another framework, you will learn all the basics and you will be able to compare it with your current development environment.
 
