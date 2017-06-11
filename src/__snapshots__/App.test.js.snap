@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly (useing snapshot) 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="Toolbar"
+  >
+    Search Toolbar
+  </div>
+  <div
+    className="TvShows"
+  >
+    A list of multiple
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="Toolbar"
+  >
+    Search Toolbar
+  </div>
+  <div
+    className="TvShows"
+  >
+    A list of multiple
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+    <div
+      className="TvShow"
+    >
+      --- TV SHOW ---
+    </div>
+  </div>
+</div>
+`;
