@@ -1,0 +1,39 @@
+.Toolbar {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+    outline: medium none;
+}
+
+input[type="search"] {
+    font-family: inherit;
+    font-size: 100%;
+}
+
+input[type="search"] {
+    background: url("http://codeapplets.com/wp-content/uploads/2014/10/search-icon.png") no-repeat scroll 9px center #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10em;
+    box-sizing: content-box;
+    padding: 9px 10px 9px 32px;
+    transition: all 0.5s ease 0s;
+    width: 135px;
+}
+
+input[type="search"]:focus {
+    background-color: #fff;
+    border-color: #6dcff6;
+    box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+    width: 80%;
+}
+
+input:-moz-placeholder {
+    color: #999;
+}
