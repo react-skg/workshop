@@ -3,18 +3,20 @@ import PropTypes from 'prop-types';
 
 import TvShow from './TvShow/TvShow';
 
+import './TvShows.css';
+
 const { object } = PropTypes;
 
 class TvShows extends Component {
   render() {
-    
+
     return (
       <div className="TvShows">
        {
         this.props.shows.results.map((show, index) => {
           return (
-            <TvShow 
-              key={index} 
+            <TvShow
+              key={index}
               id={show.id}
               name={show.name}
               overview={show.overview}

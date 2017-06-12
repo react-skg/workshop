@@ -1,0 +1,37 @@
+.TvShow {
+  width: 33.33%;
+}
+
+.TvShow-movie {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: black;
+  background: black;
+  overflow: hidden;
+}
+
+.TvShow-movie img {
+  width: 100%;
+}
+
+.TvShow-movie-info {
+  padding: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+  color: white;
+}
+
+.TvShow-movie-info-overview {
+  text-align: justify;
+}
+
+@media (min-width: 660px) {
+  .movie {
+    width: 50%;
+    display: inline-block;
+  }
+}
