@@ -36,7 +36,7 @@ In the terminal/command prompth type the following command: `npm install -g npm`
 To continue ☎ **press 0**, or checkout `step-0` 👍
 
 ## Resources
-Here are soume useful pages about the tools and libraries in this Workshop:
+Here are some useful pages about the tools and libraries in this Workshop:
 
 - [ReactJS Official Docs](https://facebook.github.io/react/docs/hello-world.html)
 - [JSX Basics](http://buildwithreact.com/tutorial/jsx)
