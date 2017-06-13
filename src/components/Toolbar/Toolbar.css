@@ -10,6 +10,7 @@
 
 input {
     outline: medium none;
+    color: black;
 }
 
 input[type="search"] {
