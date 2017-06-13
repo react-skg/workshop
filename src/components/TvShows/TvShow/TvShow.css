@@ -25,8 +25,13 @@
   color: white;
 }
 
-.TvShow-movie-info-overview {
-  text-align: justify;
+.TvShow-movie-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.TvShow-movie-title {
+  padding-right: 15px; 
 }
 
 @media (min-width: 660px) {

@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import TvShow from './TvShow/TvShow';
 
 import './TvShows.css';
-
 const { object } = PropTypes;
 
 class TvShows extends Component {
   render() {
-
     return (
       <div className="TvShows">
        {
@@ -19,7 +17,6 @@ class TvShows extends Component {
               key={index}
               id={show.id}
               name={show.name}
-              overview={show.overview}
               rating={show.vote_average}
               posterPath={show.poster_path}
               backdropPath={show.backdrop_path}
