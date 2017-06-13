@@ -25,6 +25,7 @@ Already a ReactJS developer? You're free to participate making this Workshop eve
 You have to prepare your laptop before you start. Here's a checklist with the things that you need to continue:
 
 - [ ] Windows / Mac / Linux machine
+- [ ] Install a text editor, we will use [VS Code](https://code.visualstudio.com/)
 - [ ] Clone this repo
 - [ ] Download & Install [Node.js](https://nodejs.org/en/download/) 6+
 - [ ] Upgrade `npm`:
