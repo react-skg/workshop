@@ -34,6 +34,23 @@ class TvShowDetails extends Component {
     return genresString;
   }
 
+  renderPlayImage = () => {
+    let playImage = null;
+
+    if (this.props.trailerId) {
+      playImage = (
+        <img
+          src="https://res.cloudinary.com/dw369yzsh/image/upload/v1470916845/play_button_ngnw1z.png"
+          alt="Play Trailer"
+          className="play_button"
+          onClick={() => { this.handleOpenTrailer()}}
+        />
+      );
+    }
+
+    return playImage;
+  }
+
   render() {
     return (
       <div className="TvShowDetails_wrapper">
@@ -44,12 +61,12 @@ class TvShowDetails extends Component {
           />
           <div className="TvShowDetails_content_wrapper">
         			<div className="TvShowDetails_poster">
-        				<img
+                <img
                   src={`https://image.tmdb.org/t/p/w500/${this.props.backdropPath}`}
                   alt={this.props.name}
                   className="featured_image"
                 />
-                <img src="https://res.cloudinary.com/dw369yzsh/image/upload/v1470916845/play_button_ngnw1z.png" alt="Play Trailer" className="play_button" onClick={() => { this.handleOpenTrailer()}}/>
+                {this.renderPlayImage()}
         			</div>
         			<div className="TvShowDetails_content">
                 <div className="TvShowDetails_content-title-wrapper">

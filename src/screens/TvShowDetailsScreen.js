@@ -24,7 +24,12 @@ class TvShowDetailsScreen extends Component {
         return response.text()
       }).then((body) => {
         const data = JSON.parse(body);
-        this.props.onFetchTrailerSuccess(data.results[0].key);
+        if (data.results && data.results.length > 0) {
+          this.props.onFetchTrailerSuccess(data.results[0].key);
+        } else {
+          this.props.onFetchTrailerSuccess('');
+        }
+
       })
   }
 
