@@ -6,7 +6,7 @@ import './App.css';
 
 class App extends Component {
   getShows() {
-    return shows;
+    return shows.results;
   }
 
   render() {
