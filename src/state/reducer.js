@@ -6,7 +6,7 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch(action.type) {
-    case actions.FETCH_POPULAR_MOVIES_SUCCESS:
+    case actions.FETCH_POPULAR_SHOWS_SUCCESS:
       return {
         ...state,
         shows: action.shows
