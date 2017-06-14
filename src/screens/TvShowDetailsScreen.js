@@ -9,7 +9,7 @@ import TvShows from '../components/TvShows/TvShows';
 
 class TvShowDetailsScreen extends Component {
   componentDidMount() {
-    fetch('https://api.themoviedb.org/3/tv/2288?api_key=ccd7f7c8bc4f625411a4e4925c0c5931')
+    fetch(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}?api_key=ccd7f7c8bc4f625411a4e4925c0c5931`)
       .then((response) => {
         return response.text()
       }).then((body) => {
