@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import TvShowStars from '../TvShowStars/TvShowStars';
 
@@ -11,8 +12,8 @@ class TvShow extends Component {
   render() {
     return (
       <div className="TvShow">
-        <a
-          href="#"
+        <Link
+          to={`/show/${this.props.id}`}
           className="TvShow-movie"
         >
           <img src={`https://image.tmdb.org/t/p/w500/${this.props.backdropPath}`} alt="" />
@@ -30,7 +31,7 @@ class TvShow extends Component {
           </div>
           <p>Releashed On: {this.props.firstAirDate}</p>
           </span>
-        </a>
+        </Link>
       </div>
     );
   }

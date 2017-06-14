@@ -7,7 +7,7 @@ import TvShows from '../components/TvShows/TvShows';
 
 // Component
 
-class App extends Component {
+class TvShowsScreen extends Component {
   constructor() {
     super();
 
@@ -57,4 +57,4 @@ const mapDispatchToProps = dispatch => ({
   onFetchSuccess: data => dispatch(fetchMoviesSuccess(data))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(TvShowsScreen);
