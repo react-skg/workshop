@@ -4,3 +4,8 @@ export const fetchMoviesSuccess = shows => ({
   type: actions.FETCH_POPULAR_MOVIES_SUCCESS,
   shows
 });
+
+export const fetchShowSuccess = show => ({
+  type: actions.FETCH_SHOW_SUCCESS,
+  show
+});

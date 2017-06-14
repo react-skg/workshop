@@ -1,28 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchMoviesSuccess } from '../state/actions';
+import { fetchShowSuccess } from '../state/actions';
 import Toolbar from '../components/Toolbar/Toolbar';
 import TvShows from '../components/TvShows/TvShows';
 
 // Component
 
 class TvShowDetailsScreen extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      searchFieldValue: ''
-    }
-  }
-
   componentDidMount() {
-    fetch('https://api.themoviedb.org/3/tv/popular?page=1&language=en-US&api_key=ccd7f7c8bc4f625411a4e4925c0c5931')
+    fetch('https://api.themoviedb.org/3/tv/2288?api_key=ccd7f7c8bc4f625411a4e4925c0c5931')
       .then((response) => {
         return response.text()
       }).then((body) => {
         const data = JSON.parse(body);
-        this.props.onFetchSuccess(data.results);
+        this.props.onFetchSuccess(data);
       })
   }
 
@@ -34,6 +26,7 @@ class TvShowDetailsScreen extends Component {
     return (
       <div className="App">
         DETAILS SCREEN!
+        {JSON.stringify(this.props.show || {}, null, 2, 2)}
       </div>
     );
   }
@@ -42,11 +35,11 @@ class TvShowDetailsScreen extends Component {
 // Container
 
 const mapStateToProps = state => ({
-  shows: state.shows
+  show: state.show
 });
 
 const mapDispatchToProps = dispatch => ({
-  onFetchSuccess: data => dispatch(fetchMoviesSuccess(data))
+  onFetchSuccess: data => dispatch(fetchShowSuccess(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TvShowDetailsScreen);

@@ -1,7 +1,8 @@
 import * as actions from './types';
 
 const initialState = {
-  shows: []
+  shows: [],
+  show: {}
 }
 
 export const reducer = (state = initialState, action) => {
@@ -10,6 +11,11 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         shows: action.shows
+      }
+    case actions.FETCH_SHOW_SUCCESS:
+      return {
+        ...state,
+        show: action.show
       }
     default:
       return state;

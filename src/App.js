@@ -12,7 +12,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div>
-            <Route path="/" component={TvShowsScreen} />
+            <Route path="/" exact component={TvShowsScreen} />
             <Route path="/show/:id" component={TvShowDetailsScreen} />
           </div>
         </Router>
