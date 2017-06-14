@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchMoviesSuccess } from '../state/actions';
+import { fetchShowsSuccess } from '../state/actions';
 import Toolbar from '../components/Toolbar/Toolbar';
 import TvShows from '../components/TvShows/TvShows';
 
@@ -54,7 +54,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onFetchSuccess: data => dispatch(fetchMoviesSuccess(data))
+  onFetchSuccess: data => dispatch(fetchShowsSuccess(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TvShowsScreen);

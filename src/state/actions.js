@@ -1,7 +1,7 @@
 import * as actions from './types';
 
-export const fetchMoviesSuccess = shows => ({
-  type: actions.FETCH_POPULAR_MOVIES_SUCCESS,
+export const fetchShowsSuccess = shows => ({
+  type: actions.FETCH_POPULAR_SHOWS_SUCCESS,
   shows
 });
 
