@@ -30,7 +30,7 @@ You have to prepare your laptop before you start. Here's a checklist with the th
 - [ ] Download & Install [Node.js](https://nodejs.org/en/download/) 6+
 - [ ] Upgrade `npm`:
 In the terminal/command prompth type the following command: `npm install -g npm`
-- [ ] Install [Yarn](https://yarnpkg.com/en/docs/install) using `npm inarll -g yarn`
+- [ ] Install [Yarn](https://yarnpkg.com/en/docs/install) using `npm install -g yarn`
 - [ ] You should be able to type `yarn --version` in the terminal and get the installed version.
 
 To continue ☎ **press 0**, or checkout `step-0` 👍
