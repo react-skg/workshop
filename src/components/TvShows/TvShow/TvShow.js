@@ -12,7 +12,7 @@ class TvShow extends Component {
     return (
       <div className="TvShow">
         <a
-          href="/movie/281957"
+          href="#"
           className="TvShow-movie"
         >
           <img src={`https://image.tmdb.org/t/p/w500/${this.props.backdropPath}`} alt="" />
