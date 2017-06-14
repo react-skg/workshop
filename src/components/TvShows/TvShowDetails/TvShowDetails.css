@@ -16,7 +16,6 @@
 	color: #1ECD97;
 	letter-spacing: 1px;
 	font-size: 18px;
-	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 }
 
 .TvShowDetails_content_wrapper_button_link {
@@ -90,6 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   border-radius: .5em;
   box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+  min-height: 250px;
 }
 
 .TvShowDetails .TvShowDetails_poster .play_button {
