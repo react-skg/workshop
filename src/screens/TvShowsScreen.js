@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchMoviesSuccess } from './state/actions';
-import Toolbar from './components/Toolbar/Toolbar';
-import TvShows from './components/TvShows/TvShows';
-
-import './App.css';
+import { fetchMoviesSuccess } from '../state/actions';
+import Toolbar from '../components/Toolbar/Toolbar';
+import TvShows from '../components/TvShows/TvShows';
 
 // Component
 
