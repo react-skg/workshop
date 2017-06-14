@@ -11,7 +11,7 @@ class TvShows extends Component {
     return (
       <div className="TvShows">
        {
-        this.props.shows.results.map((show, index) => {
+        this.props.shows.map((show, index) => {
           return (
             <TvShow
               key={index}
