@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { fetchShowSuccess } from '../state/actions';
-import Toolbar from '../components/Toolbar/Toolbar';
-import TvShows from '../components/TvShows/TvShows';
+import TvShowDetails from '../components/TvShows/TvShowDetails/TvShowDetails';
 
 // Component
 
@@ -23,10 +22,20 @@ class TvShowDetailsScreen extends Component {
   }
 
   render() {
+    const { show } = this.props;
+    
     return (
       <div className="App">
-        DETAILS SCREEN!
-        {JSON.stringify(this.props.show || {}, null, 2, 2)}
+        <TvShowDetails
+          name={show.name}
+          overview={show.overview}
+          id={show.id}
+          rating={show.vote_average}
+          posterPath={show.poster_path}
+          backdropPath={show.backdrop_path}
+          firstAirDate={show.first_air_date}
+          genres={show.genres}
+        />
       </div>
     );
   }

@@ -1,0 +1,155 @@
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  width: 1440px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+.TvShowDetails-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(10px);
+}
+
+.TvShowDetails {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 6.5em 0;
+}
+
+.TvShowDetails .TvShowDetails_content_wrapper {
+  width: 900px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TvShowDetails .TvShowDetails_poster {
+  width: 275px;
+  position: relative;
+  float: left;
+}
+
+.TvShowDetails_content-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.TvShowDetails .TvShowDetails_poster .featured_image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: .5em;
+  box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+}
+
+.TvShowDetails .TvShowDetails_poster .play_button {
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin: -40px 0 0 -40px;
+}
+
+.TvShowDetails .TvShowDetails_content {
+  float: left;
+  width: 500px;
+  margin-left: 100px;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.TvShowDetails .TvShowDetails_content .title {
+  display: inline;
+  font-size: 1.75em;
+  color: #FFFFFF;
+  padding-right: 15px;
+}
+
+.TvShowDetails .TvShowDetails_content .description {
+  color: #FFFFFF;
+  font-size: 1em;
+  line-height: 2;
+}
+
+.TvShowDetails .TvShowDetails_content .info {
+  color: #FFFFFF;
+  font-size: .8em;
+  font-weight: 700;
+  margin-top: 3em;
+}
+
+.TvShowDetails .TvShowDetails_content .info span {
+  margin: 0 .5em;
+}
+
+@media only screen and (max-width: 768px) {
+  .TvShowDetails {
+    padding: 3.5em 0;
+  }
+  .TvShowDetails .TvShowDetails_poster {
+    width: 250px;
+  }
+  .TvShowDetails .TvShowDetails_poster .play_button {
+    width: 60px;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -30px;
+  }
+  .TvShowDetails .TvShowDetails_content {
+    margin-left: 50px;
+  }
+  .TvShowDetails .TvShowDetails_content .title {
+    font-size: 1.5em;
+  }
+  .TvShowDetails .TvShowDetails_content .description {
+    font-size: .9em;
+    line-height: 2;
+  }
+  .TvShowDetails .TvShowDetails_content .info {
+    font-size: .7em;
+    font-weight: 700;
+    margin-top: 2em;
+  }
+  .TvShowDetails .TvShowDetails_content .info span {
+    margin: 0 .25em;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .TvShowDetails .TvShowDetails_content_wrapper {
+    display: block;
+  }
+  .TvShowDetails .TvShowDetails_content_wrapper .TvShowDetails_poster {
+    width: 250px;
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .TvShowDetails .TvShowDetails_content_wrapper .TvShowDetails_content {
+    width: 100%;
+    margin: 1em auto 0 auto;
+  }
+}
