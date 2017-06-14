@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+
 import Toolbar from './components/Toolbar/Toolbar';
 import TvShows from './components/TvShows/TvShows';
-import shows from './tvshows.json';
+
 import './App.css';
 
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
     super();
 
     this.state = {
-      shows: []
+      shows: [],
+      searchFieldValue: ''
     }
   }
 
@@ -23,11 +25,22 @@ class App extends Component {
       })
   }
 
+  handleChange(e) {
+    this.setState({ searchFieldValue: e.target.value })
+  }
+
   render() {
     return (
       <div className="App">
-        <Toolbar />
-        <TvShows shows={this.state.shows} />
+        <Toolbar 
+          searchFieldValue={this.state.searchFieldValue} 
+          onSearchFieldChange={this.handleChange.bind(this)} 
+        />
+        <TvShows 
+          shows={this.state.shows.filter(
+            show => show.name.includes(this.state.searchFieldValue)
+          )} 
+        />
       </div>
     );
   }

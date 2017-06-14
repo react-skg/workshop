@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TvShow from './TvShow/TvShow';
 
 import './TvShows.css';
-const { object } = PropTypes;
+const { array } = PropTypes;
 
 class TvShows extends Component {
   render() {
@@ -34,7 +34,7 @@ TvShows.propTypes = {
   /**
    * A list with all the tv shows to display
    */
-  shows: object
+  shows: array
 };
 
 export default TvShows;
