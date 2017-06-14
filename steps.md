@@ -21,13 +21,13 @@ We will fetch data from [themoviedb.org](http://themoviedb.org) database and imp
 
 We will convert the state to use Redux.
 
-## 5. Display TV Show details
-
-We will create a page to display TV Show details.
-
-## 6. Add routes with React Router
+## 5. Add routes with React Router
 
 We are going to implement a basic router with two main routes, the browser and the show details.
+
+## 6. Display TV Show details
+
+We will create a page to display TV Show details.
 
 ## 7. Add movies to Favourites
 
