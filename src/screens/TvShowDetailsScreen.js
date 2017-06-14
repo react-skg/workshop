@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { fetchShowSuccess } from '../state/actions';
+import { fetchShowSuccess, fetchTrailerSuccess } from '../state/actions';
 import TvShowDetails from '../components/TvShows/TvShowDetails/TvShowDetails';
+
+const { string } = PropTypes;
 
 // Component
 
@@ -15,6 +18,14 @@ class TvShowDetailsScreen extends Component {
         const data = JSON.parse(body);
         this.props.onFetchSuccess(data);
       })
+
+    fetch(`https://api.themoviedb.org/3/tv/${this.props.match.params.id}/videos?api_key=ccd7f7c8bc4f625411a4e4925c0c5931`)
+      .then((response) => {
+        return response.text()
+      }).then((body) => {
+        const data = JSON.parse(body);
+        this.props.onFetchTrailerSuccess(data.results[0].key);
+      })
   }
 
   handleChange(e) {
@@ -23,7 +34,7 @@ class TvShowDetailsScreen extends Component {
 
   render() {
     const { show } = this.props;
-    
+
     return (
       <div className="App">
         <TvShowDetails
@@ -35,20 +46,26 @@ class TvShowDetailsScreen extends Component {
           backdropPath={show.backdrop_path}
           firstAirDate={show.first_air_date}
           genres={show.genres}
+          trailerId={this.props.trailerId}
         />
       </div>
     );
   }
 }
 
+TvShowDetailsScreen.defaultProps = {
+  trailerId: string.isRequired
+}
 // Container
 
 const mapStateToProps = state => ({
-  show: state.show
+  show: state.show,
+  trailerId: state.trailerId
 });
 
 const mapDispatchToProps = dispatch => ({
-  onFetchSuccess: data => dispatch(fetchShowSuccess(data))
+  onFetchSuccess: data => dispatch(fetchShowSuccess(data)),
+  onFetchTrailerSuccess: data => dispatch(fetchTrailerSuccess(data))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TvShowDetailsScreen);

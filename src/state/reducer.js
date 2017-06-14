@@ -2,7 +2,8 @@ import * as actions from './types';
 
 const initialState = {
   shows: [],
-  show: {}
+  show: {},
+  trailerId: ''
 }
 
 export const reducer = (state = initialState, action) => {
@@ -16,6 +17,11 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         show: action.show
+      }
+    case actions.FETCH_TRAILER_SUCCESS:
+      return {
+        ...state,
+        trailerId: action.trailerId
       }
     default:
       return state;

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import Trailer from './Trailer';
+import { Link } from 'react-router-dom';
 import TvShowStars from '../TvShowStars/TvShowStars';
+import Trailer from './Trailer';
 
 import './TvShowDetails.css';
 
@@ -33,43 +33,53 @@ class TvShowDetails extends Component {
     })
     return genresString;
   }
+
   render() {
-    console.log(this.props.rating);
     return (
-      <section className="TvShowDetails clearfix">
-        <div
-          className="TvShowDetails-filter"
-          style={{ background: `url('https://image.tmdb.org/t/p/w500/${this.props.posterPath}')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
-        />
-        <div className="TvShowDetails_content_wrapper">
-      			<div className="TvShowDetails_poster">
-      				<img
-                src={`https://image.tmdb.org/t/p/w500/${this.props.backdropPath}`}
-                alt={this.props.name}
-                className="featured_image"
-              />
-              <img src="https://res.cloudinary.com/dw369yzsh/image/upload/v1470916845/play_button_ngnw1z.png" alt="Play Trailer" className="play_button" onClick={() => { this.handleOpenTrailer()}}/>
-      			</div>
-      			<div className="TvShowDetails_content">
-              <div className="TvShowDetails_content-title-wrapper">
-                <h2 className="title">{this.props.name}</h2>
-                <TvShowStars
-                  count={5}
-                  size={30}
-                  edit={false}
-                  value={this.props.rating / 2}
-                  onChange={() => {}}
-                  color2={'#ffd700'}
+      <div className="TvShowDetails_wrapper">
+        <section className="TvShowDetails clearfix">
+          <div
+            className="TvShowDetails-filter"
+            style={{ background: `url('https://image.tmdb.org/t/p/w500/${this.props.posterPath}')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}
+          />
+          <div className="TvShowDetails_content_wrapper">
+        			<div className="TvShowDetails_poster">
+        				<img
+                  src={`https://image.tmdb.org/t/p/w500/${this.props.backdropPath}`}
+                  alt={this.props.name}
+                  className="featured_image"
                 />
-              </div>
+                <img src="https://res.cloudinary.com/dw369yzsh/image/upload/v1470916845/play_button_ngnw1z.png" alt="Play Trailer" className="play_button" onClick={() => { this.handleOpenTrailer()}}/>
+        			</div>
+        			<div className="TvShowDetails_content">
+                <div className="TvShowDetails_content-title-wrapper">
+                  <h2 className="title">{this.props.name}</h2>
+                  <TvShowStars
+                    count={5}
+                    size={30}
+                    edit={false}
+                    value={this.props.rating / 2}
+                    onChange={() => {}}
+                    color2={'#ffd700'}
+                  />
+                </div>
 
-      				<p className="description">{this.props.overview}</p>
+        				<p className="description">{this.props.overview}</p>
 
-            <p className="info">{this.renderGenres()} {this.props.firstAirDate}</p>
-      			</div>
-      		</div>
-        <Trailer show={this.state.show} onHide={() => { this.handleHide(); }} youtubeId="s2xOQK_BLIg"/>
-    	</section>
+              <p className="info">{this.renderGenres()} {this.props.firstAirDate}</p>
+        			</div>
+        		</div>
+          <Trailer show={this.state.show} name={`${this.props.name} Trailer`} onHide={() => { this.handleHide(); }} youtubeId={this.props.trailerId}/>
+      	</section>
+        <button className="TvShowDetails_content_wrapper_button">
+          <Link
+            to={`/`}
+            className="TvShowDetails_content_wrapper_button_link"
+          >
+            Show All
+          </Link>
+        </button>
+      </div>
     );
   }
 }
@@ -106,7 +116,11 @@ TvShowDetails.propTypes = {
   /**
    * The genres
    */
-  genres: array
+  genres: array,
+  /**
+   * The youtuber id for trailer
+   */
+  trailerId: string
 };
 
 TvShowDetails.defaultProps = {

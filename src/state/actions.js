@@ -9,3 +9,8 @@ export const fetchShowSuccess = show => ({
   type: actions.FETCH_SHOW_SUCCESS,
   show
 });
+
+export const fetchTrailerSuccess = trailerId => ({
+  type: actions.FETCH_TRAILER_SUCCESS,
+  trailerId
+});
