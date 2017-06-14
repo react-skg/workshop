@@ -41,7 +41,7 @@ class App extends Component {
         />
         <TvShows 
           shows={this.props.shows.filter(
-            show => show.name.includes(this.state.searchFieldValue)
+            show => show.name.toLowerCase().includes(this.state.searchFieldValue.toLowerCase())
           )} 
         />
       </div>
