@@ -1,4 +1,4 @@
-# Get Ready To React - Workshop
+# Get Ready To React 🚀 - Workshop
 This repo contains all the materials you need to follow our Workshop. It is created for the event [Get Ready To React](https://www.meetup.com/Thessaloniki-ReactJS-Meetup/events/240216476/), brought you by [Thessaloniki's ReactJS Meetup (Greece)](http://skgreactjs.com).
 
 ## Table of Contents
