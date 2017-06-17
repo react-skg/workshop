@@ -32,6 +32,7 @@ You have to prepare your laptop before you start. Here's a checklist with the th
 In the terminal/command prompth type the following command: `npm install -g npm`
 - [ ] Install [Yarn](https://yarnpkg.com/en/docs/install) using `npm install -g yarn`
 - [ ] You should be able to type `yarn --version` in the terminal and get the installed version.
+- [ ] Create an account in [TheMovieDatabase](https://www.themoviedb.org) and generate an api key.
 
 To continue ☎ **press 0**, or checkout `step-0` 👍
 
