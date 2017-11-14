@@ -11,7 +11,7 @@ const { string } = PropTypes;
 // Component
 
 class TvShowDetailsScreen extends Component {
-  componentDidMount() {
+  // componentDidMount() {
     // fetch(
     //   `https://api.themoviedb.org/3/tv/${this.props.match.params
     //     .id}?api_key=ccd7f7c8bc4f625411a4e4925c0c5931`
@@ -24,22 +24,22 @@ class TvShowDetailsScreen extends Component {
     //     this.props.onFetchSuccess(data);
     //   });
 
-    fetch(
-      `https://api.themoviedb.org/3/tv/${this.props.match.params
-        .id}/videos?api_key=ccd7f7c8bc4f625411a4e4925c0c5931`
-    )
-      .then(response => {
-        return response.text();
-      })
-      .then(body => {
-        const data = JSON.parse(body);
-        if (data.results && data.results.length > 0) {
-          this.props.onFetchTrailerSuccess(data.results[0].key);
-        } else {
-          this.props.onFetchTrailerSuccess('');
-        }
-      });
-  }
+    // fetch(
+    //   `https://api.themoviedb.org/3/tv/${this.props.match.params
+    //     .id}/videos?api_key=ccd7f7c8bc4f625411a4e4925c0c5931`
+    // )
+    //   .then(response => {
+    //     return response.text();
+    //   })
+    //   .then(body => {
+    //     const data = JSON.parse(body);
+    //     if (data.results && data.results.length > 0) {
+    //       this.props.onFetchTrailerSuccess(data.results[0].key);
+    //     } else {
+    //       this.props.onFetchTrailerSuccess('');
+    //     }
+    //   });
+  // }
 
   handleChange(e) {
     this.setState({ searchFieldValue: e.target.value });
@@ -73,15 +73,15 @@ TvShowDetailsScreen.defaultProps = {
 };
 // Container
 
-const mapStateToProps = state => ({
-  // show: state.show,
-  trailerId: state.trailerId
-});
+// const mapStateToProps = state => ({
+//   // show: state.show,
+//   trailerId: state.trailerId
+// });
 
-const mapDispatchToProps = dispatch => ({
-  onFetchSuccess: data => dispatch(fetchShowSuccess(data)),
-  onFetchTrailerSuccess: data => dispatch(fetchTrailerSuccess(data))
-});
+// const mapDispatchToProps = dispatch => ({
+//   onFetchSuccess: data => dispatch(fetchShowSuccess(data)),
+//   onFetchTrailerSuccess: data => dispatch(fetchTrailerSuccess(data))
+// });
 
 // The graphql Query to get the TvShow
 const tvShowQuery = gql`
@@ -101,6 +101,12 @@ const tvShowQuery = gql`
   }
 `;
 
+const trailerQuery = gql`
+  query getTrailer($id: ID!) {
+    trailer(id: $id)
+  }
+`;
+
 // React-Apollo Container.
 // Responsible for passing down the data from apollo
 const TvShowDataContainer = graphql(tvShowQuery, {
@@ -115,7 +121,22 @@ const TvShowDataContainer = graphql(tvShowQuery, {
   })
 });
 
+const TrailerDataContainer = graphql(trailerQuery, {
+  props: ({ data }) => ({
+    trailerId: data.trailer,
+    // @NOTE => This property is the loading property in the
+    // TvShowDetailsScreen component now
+    loading: data.loading
+  }),
+  options: ownProps => ({
+    variables: {
+      id: ownProps.match.params.id
+    }
+  })
+});
+
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  TvShowDataContainer
+  // connect(mapStateToProps, mapDispatchToProps),
+  TvShowDataContainer,
+  TrailerDataContainer
 )(TvShowDetailsScreen);
