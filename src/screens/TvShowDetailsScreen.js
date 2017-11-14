@@ -5,7 +5,7 @@ import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
 import { fetchShowSuccess, fetchTrailerSuccess } from '../state/actions';
 import TvShowDetails from '../components/TvShows/TvShowDetails/TvShowDetails';
-
+import Loader from '../components/Loader';
 const { string } = PropTypes;
 
 // Component
@@ -46,9 +46,11 @@ class TvShowDetailsScreen extends Component {
   }
 
   render() {
-    const { show } = this.props;
+    const { show, loading } = this.props;
 
-    return (
+    return loading ? (
+      <Loader />
+    ) : (
       <div className="App">
         <TvShowDetails
           name={show.name}
@@ -103,7 +105,8 @@ const tvShowQuery = gql`
 // Responsible for passing down the data from apollo
 const TvShowDataContainer = graphql(tvShowQuery, {
   props: ({ data }) => ({
-    show: data.tvShow || {}
+    show: data.tvShow || {},
+    loading: data.loading
   }),
   options: ownProps => ({
     variables: {
