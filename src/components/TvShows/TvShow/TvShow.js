@@ -6,7 +6,7 @@ import TvShowStars from '../TvShowStars/TvShowStars';
 
 import './TvShow.css';
 
-const { string, number } = PropTypes;
+const { string } = PropTypes;
 
 class TvShow extends Component {
   render() {
@@ -45,11 +45,11 @@ TvShow.propTypes = {
   /**
    * The id of the show in themoviedb.org
    */
-  id: number,
+  id: string,
   /**
    * The rating which could be from 1-10
    */
-  rating: number,
+  rating: string,
   /**
    * The path of the poster image
    */

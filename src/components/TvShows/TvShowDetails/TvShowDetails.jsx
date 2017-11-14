@@ -6,7 +6,7 @@ import Trailer from './Trailer';
 
 import './TvShowDetails.css';
 
-const { string, number, array } = PropTypes;
+const { string, array } = PropTypes;
 
 class TvShowDetails extends Component {
   constructor(props){
@@ -113,11 +113,11 @@ TvShowDetails.propTypes = {
   /**
    * The id of the show in themoviedb.org
    */
-  id: number,
+  id: string,
   /**
    * The rating which could be from 1-10
    */
-  rating: number,
+  rating: string,
   /**
    * The path of the poster image
    */

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { graphql, compose } from 'react-apollo';
 import gql from 'graphql-tag';
-import { fetchShowSuccess, fetchTrailerSuccess } from '../state/actions';
+
 import TvShowDetails from '../components/TvShows/TvShowDetails/TvShowDetails';
 import Loader from '../components/Loader';
 const { string } = PropTypes;

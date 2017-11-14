@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { graphql, compose } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import { fetchShowsSuccess } from '../state/actions';
 import Toolbar from '../components/Toolbar/Toolbar';
 import TvShows from '../components/TvShows/TvShows';
+import Loader from '../components/Loader';
 
 // Component
 
@@ -16,45 +17,48 @@ class TvShowsScreen extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('https://api.themoviedb.org/3/tv/popular?page=1&language=en-US&api_key=ccd7f7c8bc4f625411a4e4925c0c5931')
-      .then((response) => {
-        return response.text()
-      }).then((body) => {
-        const data = JSON.parse(body);
-        this.props.onFetchSuccess(data.results);
-      })
-  }
-
   handleChange(e) {
     this.setState({ searchFieldValue: e.target.value })
   }
 
   render() {
-    return (
+    const { loading, shows } = this.props;
+
+    return loading ? <Loader /> : (
       <div className="App">
         <Toolbar 
           searchFieldValue={this.state.searchFieldValue} 
           onSearchFieldChange={this.handleChange.bind(this)} 
         />
         <TvShows 
-          shows={this.props.shows.filter(
+          shows={shows.filter(
             show => show.name.toLowerCase().includes(this.state.searchFieldValue.toLowerCase())
-          )} 
+          )}
         />
       </div>
     );
   }
 }
 
-// Container
+const tvShowsQuery = gql`
+  query tvShows {
+    shows: tvShows {
+      id
+      backdropPath: backdrop_path,
+      name,
+      rating: vote_average,
+      firstAirDate: first_air_date
+    }
+  }
+`;
 
-const mapStateToProps = state => ({
-  shows: state.shows
+const TvShowsScreenDataContainer = graphql(tvShowsQuery, {
+  props: ({ data }) => ({
+    shows: data.shows || [],
+    loading: data.loading
+  })
 });
 
-const mapDispatchToProps = dispatch => ({
-  onFetchSuccess: data => dispatch(fetchShowsSuccess(data))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(TvShowsScreen);
+export default compose(
+  TvShowsScreenDataContainer
+)(TvShowsScreen);

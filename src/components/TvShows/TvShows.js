@@ -15,12 +15,7 @@ class TvShows extends Component {
           return (
             <TvShow
               key={index}
-              id={show.id}
-              name={show.name}
-              rating={show.vote_average}
-              posterPath={show.poster_path}
-              backdropPath={show.backdrop_path}
-              firstAirDate={show.first_air_date}
+              {...show}
             />
           );
         })
