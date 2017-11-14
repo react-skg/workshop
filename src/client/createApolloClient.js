@@ -8,7 +8,8 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 const createApolloClient = () => {
   return new ApolloClient({
     link: createHttpLink({ uri: 'https://8lnxkljvq.lp.gql.zone/graphql' }),
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
+    connectToDevTools: true
   });
 };
 
